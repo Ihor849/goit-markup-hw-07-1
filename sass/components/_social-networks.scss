@@ -1,0 +1,33 @@
+.social-networks {
+    display: flex;
+    gap: 10px;
+    justify-content: center
+}
+
+
+.social-networks__link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background-color $transition, fill $transition;
+    fill: $color-AFB1B8;
+
+    &:hover,
+    &:focus {
+        background-color: $color-accent-2196F3;
+        fill: $color-FFFFFF;
+    }
+
+}
+
+
+.social-networks__link--foter {
+    border-radius: 50%;
+    fill: $color-FFFFFF;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-networks--footer {
+    width: 206px;
+    justify-content: flex-start
+}

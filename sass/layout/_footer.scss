@@ -1,0 +1,67 @@
+.footer {
+    background-color: $bg-footer;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.address__link {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    color: $color-FFFFFF;
+    font-style: normal;
+    transition: color $transition;
+}
+
+.address {
+    margin-top: 20px;
+}
+
+
+.address-list {
+    margin-top: 9px;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+
+
+
+.address__item {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color $transition;
+
+    &:hover,
+    &:focus {
+        color: $color-accent-2196F3;
+    }
+}
+
+
+
+
+
+
+.connect-social {
+    margin-left: 70px;
+}
+
+.subscribe {
+    margin-left: auto;
+
+}
+
+.subscribe__text {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    text-transform: uppercase;
+    color: $color-FFFFFF;
+}
+
