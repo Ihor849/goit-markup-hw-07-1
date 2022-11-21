@@ -1,13 +1,20 @@
+
 .social-networks {
-    display: flex;
+   display: flex;
+   justify-content: center;
+   align-items: center;
     gap: 10px;
-    justify-content: center
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
-
 .social-networks__link {
-    width: 44px;
-    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     transition: background-color $transition, fill $transition;
     fill: $color-AFB1B8;

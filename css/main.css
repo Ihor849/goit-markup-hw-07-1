@@ -339,7 +339,7 @@ li {
 }
 
 .container--header {
-  padding: 15px;
+  padding: 0;
 }
 
 .section {
@@ -369,56 +369,73 @@ li {
 
 .page-header {
   border-bottom: 1px solid #ECECEC;
-}
-
-.contacts {
-  margin-left: auto;
-}
-
-.contacts__link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: #757575;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.1428571429;
-  letter-spacing: 0.02em;
-}
-.contacts__link:hover, .contacts__link:focus {
-  color: #188CE8;
-  fill: #188CE8;
-}
-
-.contacts__email {
-  margin-right: 30px;
-}
-
-.contacts__icons {
-  margin-right: 10px;
-  fill: currentColor;
+  position: relative;
 }
 
 .logo-link,
 .logo-link__text {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.1923076923;
-  color: #000000;
+  font-size: 24px;
+  line-height: 1.1741666667;
+  color: black;
 }
 
-.logo-link__text {
+.logo-link__text--header {
+  margin-left: 15px;
   color: #2196F3;
 }
 
+.logo-link__text--footer {
+  color: #2196F3;
+  margin: auto;
+}
+
 .logo-link--footer {
+  margin-left: 163px;
   color: #FFFFFF;
 }
 
-@media screen and (max-width: 1200px) {
-  .navigation {
-    display: none;
-  }
+.address {
+  width: 232px;
+  height: 79px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.address-list.address-list--map {
+  padding: auto;
+}
+
+.address__item {
+  padding: auto;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-container {
+  display: block;
+  position: absolute;
+  top: 100%;
+  width: 480px;
+  height: 796px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  font-size: 20px;
+  padding: 40px 40px 48px 40px;
+}
+
+.menu-container.is-open {
+  display: none;
 }
 
 .button--hero {
@@ -436,6 +453,62 @@ li {
   letter-spacing: 0.06em;
 }
 .button--hero:hover, .button--hero:focus {
+  background-color: #188CE8;
+}
+
+.buttonnav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  border: none;
+  margin-left: auto;
+  margin-right: 23px;
+  padding: 10px 15px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+.buttonnav-menu .icon-cross {
+  display: none;
+}
+
+.buttonnav-menu.is-open .icon-cross {
+  display: block;
+}
+
+.buttonnav-menu.is-open .icon-menu {
+  display: none;
+}
+
+.buttonnav-menu:focus {
+  fill: #2196F3;
+}
+
+.button.button.button--form {
+  width: 200px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  background: #2196F3;
+  color: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button.button.button--form:hover, .button.button.button--form:focus {
   background-color: #188CE8;
 }
 
@@ -498,15 +571,29 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .social-networks__link {
-  width: 44px;
-  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -593,7 +680,7 @@ li {
 .title-social {
   display: inline-block;
   padding: 0;
-  margin-top: 0;
+  margin-top: 60px;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -683,6 +770,9 @@ li {
 }
 
 .clients--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 15px;
   width: calc((100% - 60px) / 2);
 }
@@ -727,7 +817,7 @@ li {
 }
 
 .address-list {
-  margin-top: 9px;
+  margin-top: 8px;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   font-size: 14px;
@@ -747,7 +837,9 @@ li {
 }
 
 .connect-social {
-  margin-left: 70px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 60px;
 }
 
 .subscribe {
@@ -760,7 +852,24 @@ li {
   font-size: 14px;
   line-height: 1.1428571429;
   text-transform: uppercase;
+  text-align: center;
   color: #FFFFFF;
+}
+
+.label__footer {
+  margin-bottom: 20px;
+  display: block;
+  color: #f10d0d;
+}
+
+.form__email {
+  width: 100%;
+  height: 50px;
+  color: #ffffff;
+  color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: inherit;
 }
 
 .backdrop {
@@ -787,8 +896,8 @@ li {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 450px;
+  min-height: 609px;
   padding: 40px;
   border-radius: 4px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -801,6 +910,12 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   right: 8px;
   top: 8px;
@@ -881,7 +996,7 @@ li {
 .form__textarea {
   margin-top: 4px;
   display: block;
-  width: 448px;
+  width: 370px;
   height: 120px;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -956,19 +1071,6 @@ li {
   background-color: #FFFFFF;
   border: 2px solid #212121;
   border-radius: 2px;
-}
-
-.form__email {
-  width: 358px;
-  height: 50px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 16px;
-  margin-right: 12px;
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  background-color: inherit;
 }
 
 .button--icon {
