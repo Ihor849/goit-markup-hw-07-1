@@ -1,0 +1,29 @@
+.section {
+    padding-bottom: 60px;
+    padding-top: 60px;
+
+}
+
+.section__hero {
+    padding-top: 180px;
+    padding-bottom: 180px;
+    max-width: 1600px;
+
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $color-C4C4C4;
+    background-size: cover;
+    background-image: linear-gradient(to right,
+            rgba(49, 47, 58, 0.4), rgba(49, 47, 58, 0.4)),
+        url(../images/hero.jpg);
+    text-align: center;
+}
+
+
+.section--clients {
+    padding-top: 98px;
+    padding-bottom: 84px;
+    margin-left: auto;
+    margin-right: auto;
+
+}

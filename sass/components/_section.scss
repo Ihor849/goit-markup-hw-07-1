@@ -2,6 +2,11 @@
     padding-bottom: 60px;
     padding-top: 60px;
 
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 94px;
+        padding-top: 94px;
+    }
+
 }
 
 .section__hero {
@@ -17,13 +22,25 @@
             rgba(49, 47, 58, 0.4), rgba(49, 47, 58, 0.4)),
         url(../images/hero.jpg);
     text-align: center;
+
+    @media screen and (min-width:1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        
+    }
+}
+
+.section--work {
+    @media screen and (max-width:1200px) {
+        display: none;
+    }
 }
 
 
-.section--clients {
-    padding-top: 98px;
-    padding-bottom: 84px;
-    margin-left: auto;
-    margin-right: auto;
+// .section--clients {
+//     padding-top: 98px;
+//     padding-bottom: 84px;
+//     margin-left: auto;
+//     margin-right: auto;
 
-}
+// }
