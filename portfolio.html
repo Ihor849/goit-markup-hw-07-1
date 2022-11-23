@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="js/" />
   </head>
   <body>
     <!-- Hat -->
@@ -18,31 +19,70 @@
         <nav class="navigation">
           <!-- Logo -->
           <a href="./index.html" class="logo-link"
-            ><span class="logo-link__text">Web</span>Studio
+            ><span class="logo-link__text logo-link__text--header">Web</span>Studio
           </a>
-          <ul class="navigation__list">
-            <li class="navigation__item"><a href="./index.html" class="navigation__link">Студія</a></li>
-            <li class="navigation__item"><a href="./portfolio.html" class="navigation__link navigation__link--current">Портфоліо</a></li>
-            <li class="navigation__item"><a href="#" class="navigation__link">Контакти</a></li>
-          </ul>
+          <button type="button" aria-expanded="false" aria-controls="menu-container" class="buttonnav-menu" data-menu-button>
+            <svg aria-label="Перемикач мобільного мєню" width="40" height="40">
+              <use 
+                class="icon-menu"
+                href="./images/icons.svg/symbol-defs.svg#icon-modalnav-open">
+              </use>
+              <use
+                class="icon-cross"
+                href="./images/icons.svg/symbol-defs.svg#icon-close_40px">
+              </use>
+            </svg>
+          </button>
+          <!-- Navigation -->
+          <div class="menu-container is-open" id="menu-container" data-menu>
+            
+            <ul class="navigation__list">
+                <li class="navigation__item navigation__item--studio">
+                  <a
+                    href="./index.html"
+                    class="navigation__link"
+                    >Студія</a
+                  >
+                </li>
+                <li class="navigation__item navigation__item--portfolio">
+                  <a href="./portfolio.html" class="navigation__link navigation__link--current"
+                    >Портфоліо</a
+                  >
+                </li>
+                <li class="navigation__item navigation__item--contacts">
+                  <a href="#" class="navigation__link">Контакти</a>
+                </li>
+            </ul>
+            <!-- Contacts -->
+            <ul class="contacts">
+              <li class="contacts__email">
+                  <a href="mailto:info@devstudio.com" class="contacts__link">
+                    <svg class="contacts__icons" width="16" height="12">
+                      <use
+                        href="./images/icons.svg/symbol-defs.svg#icon-envelope"
+                      ></use></svg
+                    >info@devstudio.com
+                  </a>
+              </li>
+              <li class="contacts__tel">
+                  <a href="tel:+380961111111" class="contacts__link">
+                    <svg class="contacts__icons" width="10" height="16">
+                      <use
+                        href="./images/icons.svg/symbol-defs.svg#icon-smartphone"
+                      ></use></svg
+                    >+38 096 111 11 11
+                  </a>
+              </li>
+            </ul>
+            <ul class="contacts__bloc">
+              <li class="contacts__bloc--social"><a class="contacts__bloc--link" href="#">Instagram</a></li>
+              <li class="contacts__bloc--social"><a class="contacts__bloc--link" href="#">Twitter</a></li>
+              <li class="contacts__bloc--social"><a class="contacts__bloc--link" href="#">Facebook</a></li>
+              <li class="contacts__bloc--social"><a class="contacts__bloc--link" href="#">LinkedIn</a></li>
+            </ul>
+            
+          </div>
         </nav>
-        <!-- Contacts -->
-        <ul class="contacts">
-          <li class="contacts__email">
-            <a href="mailto:info@devstudio.com" class="contacts__link">
-              <svg class="contacts__icons" width="16" height="12">
-                <use href="./images/icons.svg/symbol-defs.svg#icon-envelope"></use>
-              </svg>info@devstudio.com
-            </a>
-          </li>
-          <li class="contacts__tel">
-            <a href="tel:+380961111111" class="contacts__link">
-              <svg class="contacts__icons" width="10" height="16">
-                <use href="./images/icons.svg/symbol-defs.svg#icon-smartphone"></use>
-              </svg>+38 096 111 11 11
-            </a>
-          </li>
-        </ul>
       </div>
     </header>
     <!-- main -->
@@ -176,73 +216,111 @@
     <footer class="footer">
       <div class="container container--addres">
         <!-- address -->
-        <div>
-          <a href="./index.html" class="logo-link logo-link--footer"><span class="logo-link__text">Web</span>Studio</a>
-          <address class="address">
-            <ul class="address__contact">
-              <li class="address-list address-list--map">
-                <a class="address__link"
-                  href="https://goo.gl/maps/maQHvK9j9s51aTgQ8"
-                  target="_blank"
-                  rel="noreferrer noopener nofollow"
-                  title="Google Maps"
-                  >м. Київ, пр-т Лесі Українки, 26
+        <div class="container-contact">
+          <div class="footer__contact">
+            <a href="./index.html" class="logo-link logo-link--footer"
+              ><span class="logo-link__text logo-link__text--footer">Web</span>Studio</a>
+            <address class="address">
+              <ul class="address__contact">
+                <li class="address-list address-list--map">
+                  <a
+                    class="address__link"
+                    href="https://goo.gl/maps/maQHvK9j9s51aTgQ8"
+                    target="_blank"
+                    rel="noreferrer noopener nofollow"
+                    title="Google Maps"
+                    >м. Київ, пр-т Лесі Українки, 26
+                  </a>
+                </li>
+                <li class="address-list">
+                  <a href="mailto:info@devstudio.com" class="address__item"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="address-list">
+                  <a href="tel:+380961111111" class="address__item"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="connect-social">
+            <h2 class="title-social">приєднуйтесь</h2>
+            <ul class="social-networks social-networks--footer">
+              <li>
+                <a
+                  class="social-networks__link social-networks__link--foter"
+                  href="https://www.instagram.com/"
+                >
+                  <svg class="social-networks__icon" width="20" height="20">
+                    <use
+                      href="./images/icons.svg/symbol-defs.svg#icon-instagram"
+                    ></use>
+                  </svg>
                 </a>
               </li>
-              <li class="address-list"><a href="mailto:info@devstudio.com" class="address__item">info@devstudio.com</a></li>
-              <li class="address-list"><a href="tel:+380961111111" class="address__item">+38 096 111 11 11</a></li>
+              <li>
+                <a
+                  class="social-networks__link social-networks__link--foter"
+                  href="https://twitter.com/"
+                >
+                  <svg class="social-networks__icon" width="20" height="20">
+                    <use
+                      href="./images/icons.svg/symbol-defs.svg#icon-twitter"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="social-networks__link social-networks__link--foter"
+                  href="https://www.facebook.com/"
+                >
+                  <svg class="social-networks__icon" width="20" height="20">
+                    <use
+                      href="./images/icons.svg/symbol-defs.svg#icon-facebook"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="social-networks__link social-networks__link--foter"
+                  href="https://www.linkedin.com/"
+                >
+                  <svg class="social-networks__icon" width="20" height="20">
+                    <use
+                      href="./images/icons.svg/symbol-defs.svg#icon-linkedin"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
             </ul>
-          </address>
-        </div>
-        <div class="connect-social">
-          <h2 class="title-social">
-            приєднуйтесь
-          </h2>
-          <ul class="social-networks social-networks--footer">
-            <li>
-                    <a class="social-networks__link social-networks__link--foter" href="https://www.instagram.com/">
-                      <svg class="social-networks__icon" width="20" height="20">
-                      <use href="./images/icons.svg/symbol-defs.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-            </li>
-            <li>
-              <a class="social-networks__link social-networks__link--foter" href="https://twitter.com/">
-                <svg class="social-networks__icon" width="20" height="20">
-                  <use href="./images/icons.svg/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="social-networks__link social-networks__link--foter" href="https://www.facebook.com/">
-                <svg class="social-networks__icon" width="20" height="20">
-                  <use href="./images/icons.svg/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="social-networks__link social-networks__link--foter" href="https://www.linkedin.com/">
-                <svg class="social-networks__icon" width="20" height="20">
-                  <use href="./images/icons.svg/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>                  
+          </div>
         </div>
         <div class="subscribe">
-          <p class="subscribe__text">
-            Підпишіться на розсилку
-          </p>
+          <p class="subscribe__text list">Підпишіться на розсилку</p>
           <form class="form">
-            <label>
-              <input class="form__email" type="email" name="subscribe" placeholder="E-mail">
+            <label class="label__footer">
+              <input
+                class="form__email"
+                type="email"
+                name="subscribe"
+                placeholder="E-mail"
+              />
             </label>
-            <button class="button button--form" type="submit">Підписатися<svg class="button--icon">
-              <use href="./images/icons.svg/symbol-defs.svg#icon-icon-send"></use></svg>
+            <button class="button button--form" type="submit">
+              Підписатися<svg class="button--icon">
+                <use
+                  href="./images/icons.svg/symbol-defs.svg#icon-icon-send"
+                ></use>
+              </svg>
             </button>
           </form>
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
