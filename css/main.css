@@ -330,6 +330,7 @@ img {
   margin-right: auto;
   padding-right: 15px;
   padding-left: 15px;
+  outline: 2px solid red;
 }
 @media (min-width: 480px) {
   .container {
@@ -945,8 +946,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
   min-width: 450px;
   min-height: 609px;
   padding: 40px;
@@ -956,21 +957,13 @@ img {
   background: #FFFFFF;
   overflow-y: scroll;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    min-width: 450px;
-    min-height: 609px;
-    padding: 40px;
-    border-radius: 4px;
-    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    background: #FFFFFF;
-    overflow-y: scroll;
+    min-width: 528px;
+    min-height: 581px;
+    overflow-y: hidden;
   }
 }
 
@@ -1075,6 +1068,11 @@ img {
 }
 .form__textarea:focus, .form__textarea:hover {
   border: 1px solid #2196F3;
+}
+@media screen and (min-width: 1200px) {
+  .form__textarea {
+    width: 448px;
+  }
 }
 
 .form__textarea-label {
@@ -1614,7 +1612,7 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .form {
+  .form__footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
