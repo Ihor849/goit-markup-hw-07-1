@@ -1,12 +1,10 @@
 .navigation {
-    display: flex;
-    align-items: center;
+    @include centredFlex();
 
     @media screen and (min-width:768px) {
         position: relative;
         justify-content: flex-end
     }
-
 }
 
 .navigation__link--current {
@@ -18,13 +16,14 @@
 .navigation__link--current::after {
     content: "";
     position: absolute;
+    width: 100%;
     height: 4px;
     bottom: -1px;   
-    width: 100%;
-    border-radius: 4px;
     display: block;
-    background-color: $color-accent-2196F3;
+    border-radius: 4px;
     z-index: 10;
+
+    background-color: $color-accent-2196F3;
 }
 
 @media screen and (max-width: 767px) {
@@ -35,18 +34,20 @@
  
 .menu-container {
     @media screen and (max-width:767px) {
-        display: block;
         position: absolute;
-        top: 100%;
+        display: block;
         width: 480px;
         height: 796px;
+        top: 100%;
         margin-left: auto;
         margin-right: auto;
-        background-color: #ffffff;
-        font-size: 20px;
         padding:48px 40px;
         z-index: 1000;
+
+        background-color: $color-FFFFFF;
+        font-size: 20px;  
     }
+
     @media screen and (min-width:768px) {
         display: flex;
     }
@@ -62,7 +63,6 @@
     @media screen and (max-width:767px){
         margin-bottom: 32px;
     }
-    
 }
 
 .navigation__link {
@@ -87,7 +87,6 @@
         line-height: calc(16 / 14);
     }
 }
-
 
 .navigation__list {
     @media screen and (max-width:767px) {
@@ -123,7 +122,6 @@
     @media screen and (max-width:767px){
         margin-bottom: 32px;
     }
-
     @media screen and (min-width: 768px) {
         margin-bottom: 10px;
     
@@ -135,8 +133,6 @@
     
 }
 
-
-
 .contacts__link {
     font-weight: 500;
     letter-spacing: 0.02em;
@@ -144,22 +140,18 @@
     line-height: calc(40 / 34);
 
     @media screen and (min-width:768px) {
-        display: flex;
-        align-items: center;
+        @include centredFlex();
         font-size: 12px;
         line-height: calc(14 / 12);
     }
 
 }
 
-
-
-
 .contacts__link {
     color: $color-main-txt;
 
     &:focus  {
-        color: #2196F3;
+        color: $color-accent-2196F3;
     }
 }
 
@@ -174,6 +166,7 @@
 
     .contacts__bloc--link {
         padding: 10px;
+
         font-weight: 500;
         font-size: 18px;
         line-height: 22px;
@@ -181,7 +174,7 @@
         color: $color-main-txt;
     
         &:focus {
-            color: #2196F3;
+            color: $color-accent-2196F3;
         }
     
     }
@@ -203,7 +196,6 @@
     @media screen and (min-width: 1200px) {
         margin-right: 10px; 
     }
-    
 }
 
  

@@ -29,7 +29,6 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
         background: $color-FFFFFF;
         overflow-y: scroll;
-
     }
 }
 
@@ -102,7 +101,6 @@
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
-
 }
 
 
@@ -116,7 +114,6 @@
     fill: currentColor;
     color: $color-secondary-txt;
     transition: color $transition;
-
 }
 
 .form__coment {
@@ -140,7 +137,6 @@
     &:focus,
     &:hover {
         border: 1px solid $color-accent-2196F3;
-    
     }
 }
 
@@ -191,8 +187,6 @@
         background-origin: border-box;
         border-color: $color-accent-2196F3;
     }
-
-
 }
 
 .form__check-link {
